@@ -1,8 +1,11 @@
 #!/bin/bash -x
-read -p "Enter first number : " a
-read -p "Enter second number : "  b
-read -p "Enter third number : "    c
+declare -A Calculations
 
-d=$(( $a % $b + $c ))
+Calculations[ a+b*c ]="13"
+Calculations[ a*b+c ]="16"
+Calculations[ a%b*c ]="1"
+Calculations[ c+a/b ]="9"
 
-echo $d;
+echo "a+b*c Calculation " ${calculations[ a+b*c ]}
+echo "All Arithmatic Calculations " ${calculations[ @ ]}
+
